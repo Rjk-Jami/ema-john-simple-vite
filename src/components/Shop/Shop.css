@@ -1,11 +1,11 @@
 .shop-container{
     display: grid;
     grid-template-columns: 4fr 1fr ;
-    align-items: center;
-    justify-items: center;
+    
 }
 .products-container{
-
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 
