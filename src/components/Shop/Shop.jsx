@@ -27,11 +27,7 @@ const Shop = () => {
             </div>
 
             <div className="cart-container">
-                <h3>order summary</h3>
-                <p>selected item:{cart.length} </p>
-                <p>Total Shipping Charge: $</p>
-                <p>Tax: $</p>
-                <h3>Grand Total: $</h3>
+                <p>order summary</p>
             </div>
         
         </div>
