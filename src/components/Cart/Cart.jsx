@@ -13,6 +13,8 @@ const Cart = ({cart}) => {
     }
     const tax = total * 7 / 100;
     const grandTotal  = total + shipping + tax
+
+
     return (
         <div className='cart flex flex-col gap-3 sticky top-0'>
             <h3 className='text-2xl mb-3'>order summary</h3>
