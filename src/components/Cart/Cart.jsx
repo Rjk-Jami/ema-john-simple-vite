@@ -3,11 +3,12 @@ import './Cart.css'
 const Cart = ({cart}) => {
     // const cart = props.cart
     // const {cart} = props
-    console.log(cart)
+    // console.log(cart)
     let total = 0;
     let shipping = 0;
+
     for(const product of cart){
-        console.log(product)
+        // console.log(product)
         total = total + product.price
         shipping = shipping + product.shipping
     }
