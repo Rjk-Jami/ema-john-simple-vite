@@ -13,7 +13,7 @@ const Shop = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
-    console.log('check laptop git push')
+    // console.log('check laptop git push')
     useEffect(() => {
         const storedCart = getShoppingCart();
         const savedCart =[]
