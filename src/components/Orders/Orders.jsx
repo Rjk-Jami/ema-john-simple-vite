@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import "./Order.css"
 import { useLoaderData } from 'react-router-dom';
 import ReviewItem from '../ReviewItem/ReviewItem';
-import { removeFromDb } from '../../utilities/fakedb';
+import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 
 
 const Orders = () => {
@@ -15,17 +15,22 @@ const Orders = () => {
        setCart(remaining);
        removeFromDb(id)
     }
+    const handleClearCart = ()=>{
+        setCart([])
+        deleteShoppingCart()
+        console.log(cart)
+    }
     // console.log(savedCart)
     return (
-        <div className='order-container '>
+        <div className='md:flex flex-row '>
             <div className="review-container">
             {
                 cart.map(product => <ReviewItem key = {product.id} product = {product}
                     handleRemoveFromCart= {handleRemoveFromCart}/>)
             }
             </div>
-            <div className="cart-container">
-                <Cart cart={cart}
+            <div className="cart-container ">
+                <Cart handleClearCart={handleClearCart} cart={cart}
                 > </Cart>
             </div>
         </div>
